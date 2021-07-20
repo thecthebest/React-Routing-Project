@@ -1,8 +1,18 @@
+import { Route, Switch } from "react-router-dom";
+
 function App() {
   return (
-    <div>
+    <Switch>
+      <Route path="/quotes">
 
-    </div>
+      </Route>
+      <Route path="/quotes/:quotesId">
+
+      </Route>
+      <Route path="/new-quotes">
+
+      </Route>
+    </Switch>
   );
 }
 
