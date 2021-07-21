@@ -12,6 +12,9 @@ function QuoteDetail() {
         return quote.id === params.quotesId;
     });
     const params = useParams();
+    if(!quote) {
+        return <p>No quote found!</p>;
+    }
     return (
         <Fragment>
             <HighlightedQuote text={quote.props} author={quote.props} />
