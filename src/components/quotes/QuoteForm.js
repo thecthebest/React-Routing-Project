@@ -18,10 +18,12 @@ const QuoteForm = (props) => {
 
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
-
+  const formFocusHandler = () => {
+    
+  };
   return (
     <Card>
-      <form className={classes.form} onSubmit={submitFormHandler}>
+      <form onFocus={formFocusHandler} className={classes.form} onSubmit={submitFormHandler}>
         {props.isLoading && (
           <div className={classes.loading}>
             <LoadingSpinner />
