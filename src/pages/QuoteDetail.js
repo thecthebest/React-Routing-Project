@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Route, useParams } from "react-router-dom";
 import Comments from "../components/comments/Comments";
+import HighlightedQuote from "../components/quotes/HighlightedQuote";
 const Dummy_Quotes = [
     {id: 'q1', author: 'Sam', text: 'Learning React is fun!'},
     {id: 'q2', author: 'Tom', text: 'Learning Ruby is fun!'},
@@ -13,8 +14,7 @@ function QuoteDetail() {
     const params = useParams();
     return (
         <Fragment>
-            <h1>Quote Detail Page</h1>
-            <p>{params.quotesId}</p>
+            <HighlightedQuote text={quote.props} author={quote.props} />
             <Route path={`/quotes/${params.quotesId}/comments`}>
                 <Comments />
             </Route>
