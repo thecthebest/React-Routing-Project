@@ -11,7 +11,7 @@ const QuoteList = (props) => {
   const queryParams = new URLSearchParams(location.search);
   const isSortingAscending = queryParams.get('sort') === 'asc';
   const change = () => {
-    history.push('/quote?sort=' + (isSortingAscending ? 'desc' : 'asc'));
+    history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc'));
   };
 
   return (
