@@ -17,7 +17,7 @@ function QuoteDetail() {
     }
     return (
         <Fragment>
-            <HighlightedQuote text={quote.props} author={quote.props} />
+            <HighlightedQuote text={quote.text} author={quote.author} />
             <Route path={`/quotes/${params.quotesId}/comments`}>
                 <Comments />
             </Route>
