@@ -5,6 +5,13 @@ import QuoteItem from './QuoteItem';
 import classes from './QuoteList.module.css';
 
 const QuoteList = (props) => {
+  const history = useHistory();
+  //The component is re-evaluted
+  const location = useLocation();
+  const change = () => {
+    history.push('/quote?sort=asc');
+  };
+
   return (
     <Fragment>
       <div className={classes.sorting}>
