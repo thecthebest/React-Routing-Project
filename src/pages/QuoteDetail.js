@@ -8,10 +8,10 @@ const Dummy_Quotes = [
     {id: 'q3', author: 'Mario', text: 'Learning JavaScript is fun!'},
 ];
 function QuoteDetail() {
+    const params = useParams();
     const quote = Dummy_Quotes.find((quote) => {
         return quote.id === params.quotesId;
     });
-    const params = useParams();
     if(!quote) {
         return <p>No quote found!</p>;
     }
