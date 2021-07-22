@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import QuoteItem from './QuoteItem';
 import classes from './QuoteList.module.css';
@@ -6,6 +7,9 @@ import classes from './QuoteList.module.css';
 const QuoteList = (props) => {
   return (
     <Fragment>
+      <div className={classes.sorting}>
+      <button onClick={change}>URL</button>
+      </div>
       <ul className={classes.list}>
         {props.quotes.map((quote) => (
           <QuoteItem
