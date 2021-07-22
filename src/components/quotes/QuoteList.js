@@ -17,7 +17,7 @@ const QuoteList = (props) => {
   return (
     <Fragment>
       <div className={classes.sorting}>
-      <button onClick={change}>URL</button>
+      <button onClick={change}>Sort {isSortingAscending ? 'Descending' : 'Ascending'}</button>
       </div>
       <ul className={classes.list}>
         {props.quotes.map((quote) => (
