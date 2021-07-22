@@ -23,6 +23,9 @@ const QuoteForm = (props) => {
   const formFocusHandler = () => {
     setISEntering(true);
   };
+  const finishEnterHandler = () => {
+    setISEntering(false);
+  };
   return (
     <Fragment>
       <Prompt when={isEntering}
@@ -46,7 +49,7 @@ const QuoteForm = (props) => {
             <textarea id='text' rows='5' ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button className='btn'>Add Quote</button>
+            <button onClick={finishEnterHandler} className='btn'>Add Quote</button>
           </div>
         </form>
       </Card>
