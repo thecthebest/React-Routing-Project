@@ -23,7 +23,7 @@ const QuoteList = (props) => {
   const change = () => {
     history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc'));
   };
-const sortedQuotes = sortQuotes(props.quote, isSortingAscending);
+const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
   return (
     <Fragment>
       <div className={classes.sorting}>
